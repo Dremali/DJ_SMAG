@@ -1,10 +1,10 @@
 module.exports = {
 TOKEN: "",
-ownerID: [""], //write your discord user id. example: ["id"] or ["id1","id2"]
+ownerID: ["230399675339898880"], //write your discord user id. example: ["id"] or ["id1","id2"]
 botInvite: "", //write your discord bot invite.
 supportServer: "", //write your discord bot support server invite.
 mongodbURL: "", //write your mongodb url.
-status: '❤️ codeshare.me',
+status: 'Listening to Music',
 commandsDir: './commands', //Please don't touch
 language: "en", //en, tr, nl, pt, fr, ar, zh_TW, it, ja
 embedColor: "ffa954", //hex color code
@@ -12,7 +12,7 @@ errorLog: "", //write your discord error log channel id.
 
 
 sponsor: {
-status: true, //true or false
+status: false, //true or false
 url: "https://awmbilisim.com", //write your discord sponsor url.
 },
 
@@ -43,12 +43,12 @@ leaveOnStop: false, //If this variable is "true", the bot will leave the channel
 
 leaveOnEmpty: { //The leaveOnEnd variable must be "false" to use this system.
 status: true, //If this variable is "true", the bot will leave the channel when the bot is offline.
-cooldown: 10000000, //1000 = 1 second
+cooldown: 300000, //1000 = 1 second
 },
 
 },
 
-maxVol: 150, //You can specify the maximum volume level.
+maxVol: 200, //You can specify the maximum volume level.
 
 }
 }

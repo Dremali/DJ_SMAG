@@ -6,6 +6,7 @@ const { DeezerPlugin } = require("@distube/deezer");
 const { YtDlpPlugin } = require("@distube/yt-dlp");
 const config = require("./config.js");
 const fs = require("fs");
+require('dotenv').config();
 const client = new Client({
   partials: [
     Partials.Channel, // for text channel
@@ -25,8 +26,8 @@ client.player = new DisTube(client, {
   leaveOnStop: config.opt.voiceConfig.leaveOnStop,
   leaveOnFinish: config.opt.voiceConfig.leaveOnFinish,
   emitNewSongOnly: true,
-  emitAddSongWhenCreatingQueue: false,
-  emitAddListWhenCreatingQueue: false,
+  emitAddSongWhenCreatingQueue: true,
+  emitAddListWhenCreatingQueue: true,
   plugins: [
     new SpotifyPlugin(),
     new SoundCloudPlugin(),
@@ -107,10 +108,10 @@ if(config.mongodbURL || process.env.MONGO){
   }
 
 
-const express = require("express");
-const app = express();
-const http = require("http");
-app.get("/", (request, response) => {
-  response?.sendStatus(200);
-});
-app.listen(process?.env?.PORT);
+// const express = require("express");
+// const app = express();
+// const http = require("http");
+// app.get("/", (request, response) => {
+//   response?.sendStatus(200);
+// });
+// app.listen(process?.env?.PORT);
